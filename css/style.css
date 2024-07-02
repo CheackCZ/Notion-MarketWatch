@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.stock-rebalancer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+.stock-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: 14%;
+}
+
+.stock-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.stock-value {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #d4af37;
+}
+
+.stock-change {
+    font-size: 1.2em;
+}
+
+.stock-change.down {
+    color: #ff4c4c;
+}
+
+.stock-change.up {
+    color: #4cff4c;
+}
+
+.point-change {
+    font-size: 0.8em;
+    display: block;
+    margin-top: 5px;
+}
