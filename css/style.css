@@ -21,7 +21,7 @@ body {
 .stock-item {
     text-align: center;
     
-    padding: 10px;
+    padding: 5px;
     
     border: 1px solid #333;
     border-radius: 8px;
@@ -30,9 +30,9 @@ body {
 }
 
 .stock-name {
-    font-size: 1.2em;
+    font-size: 1em;
    
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .stock-value {
@@ -44,7 +44,7 @@ body {
 }
 
 .stock-change {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .stock-change.down {
