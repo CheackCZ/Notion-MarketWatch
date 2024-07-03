@@ -34,9 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const stockInfo = data.data[0];
                     const value = parseFloat(stockInfo.price);
                     const openValue = parseFloat(stockInfo.day_open);
-                    const previousCloseValue = parseFloat(stockInfo.previous_close_price);
                     const changePoints = value - openValue;
-                    const changePercent = ((value - previousCloseValue) / previousCloseValue) * 100;
+                    const changePercent = ((value - openValue) / openValue) * 100;
 
                     updateStockItem(stock.name, value, changePercent, changePoints);
                 } else {
@@ -71,11 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (stockItem) {
             stockItem.querySelector('.stock-value').textContent = value.toFixed(2);
             const changeElement = stockItem.querySelector('.stock-change');
+            changeElement.className = `stock-change ${changePercent < 0 ? 'down' : 'up'}`;
             changeElement.innerHTML = `
                 <span>${changePercent < 0 ? '▼' : '▲'} ${Math.abs(changePercent).toFixed(2)}%</span>
                 <span class="point-change">${changePoints.toFixed(2)}</span>
             `;
-            changeElement.className = `stock-change ${changePercent < 0 ? 'down' : 'up'}`;
         }
     }
 
